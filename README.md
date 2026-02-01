@@ -40,7 +40,11 @@ A full-featured grocery shopping web application built using **ASP.NET WebForms*
 
 ## 🚀 Installation
 
-### 📋 Prerequisites: XAMPP, PHP 7.4+, MySQL 5.7+
+### 📋 Prerequisites
+- **Visual Studio 2019 or later** (Community/Professional/Enterprise)
+- **.NET Framework 4.7.2** or higher
+- **SQL Server LocalDB** (included with Visual Studio)
+- **IIS Express** (included with Visual Studio)
 
 ### 1️⃣ Clone Repository
 
@@ -49,26 +53,38 @@ git clone https://github.com/19JayPatel/FoodMart-Grocery-Website.git
 cd FoodMart-Grocery-Website
 ```
 
-### 2️⃣ Setup Database
+### 2️⃣ Open in Visual Studio
 
-- Open phpMyAdmin: http://localhost/phpmyadmin
-- Create database: `FoodMart`
-- Import: `database/FoodMart.sql`
+- Open `FoodMart_Pro.sln` in Visual Studio
+- The solution will automatically restore NuGet packages
 
-### 3️⃣ Configure
+### 3️⃣ Setup Database
 
-- Edit `includes/config.php` with your database credentials
+The project uses **SQL Server LocalDB** which is automatically installed with Visual Studio.
 
-### 4️⃣ Launch
-
+**Connection String (in Web.config):**
+```xml
+Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\FoodMart.mdf;Integrated Security=True
 ```
-http://localhost/FoodMart-Grocery-Website
-```
+
+The database file `FoodMart.mdf` will be created automatically in the `App_Data` folder when you first run the application, or you can:
+
+1. Open **SQL Server Object Explorer** in Visual Studio
+2. Expand **(localdb)\MSSQLLocalDB**
+3. Execute the SQL schema provided below to create tables
+4. Or use the existing database file if included in the project
+
+### 4️⃣ Build and Run
+
+1. Press **F5** or click the **Start** button in Visual Studio
+2. IIS Express will launch the application
+3. Default URL: `http://localhost:[port]/User/index.aspx`
+
 ---
 
 ## 🛢️ Database Schema
 
-Execute the following SQL queries in SQL Server Management Studio to set up the database:
+The project uses **SQL Server LocalDB** (included with Visual Studio). Execute the following SQL queries in **SQL Server Object Explorer** or **Server Explorer** within Visual Studio to set up the database:
 
 ```sql
 CREATE DATABASE FoodMart;
@@ -143,15 +159,34 @@ VALUES ('foodmart', 'foodmart123');
 
 ## 🔑 Default Credentials
 
-### 👨‍💼 Admin: **Username:** `foodmart` | **Password:** `foodmart123`
-### 👥 Students: Register at `/user/register.php`
+### 👨‍💼 Admin
+- **Username:** `foodmart` 
+- **Password:** `foodmart123`
+- **Login URL:** `/Admin/adminlogin.aspx`
+
+### 👥 Users
+- Register at `/User/Signup.aspx`
+- Login at `/User/login.aspx`
+
+---
+
+## 🖥️ Development Environment
+
+- **IDE:** Visual Studio 2019/2022
+- **Framework:** ASP.NET Web Forms (.NET Framework 4.7.2)
+- **Database:** SQL Server LocalDB (MSSQLLocalDB)
+- **Web Server:** IIS Express (integrated with Visual Studio)
+- **Reporting:** Crystal Reports for Visual Studio
+
+---
 
 ## 🔒 Security
 
-- ✅ Password hashing with `password_hash()`
-- ✅ SQL injection prevention
+- ✅ ASP.NET built-in authentication
+- ✅ SQL injection prevention with parameterized queries
 - ✅ Session-based authentication
-- ✅ CSRF protection
+- ✅ ViewState encryption
+- ✅ Request validation enabled
 
 ## 📸 Screenshots
 
