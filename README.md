@@ -1,38 +1,76 @@
-# 🛒 FoodMart – Online Grocery Store (ASP.NET WebForms)
+# 🛒 Food-Grocery-Mart
 
-FoodMart is a simple **grocery shopping web application** built using **ASP.NET WebForms** and **SQL Server**.  
-It allows customers to register, log in, browse grocery items, manage their cart, and place orders.  
-An **Admin Panel** is provided for managing categories, products, and users.
+![ASP.NET](https://img.shields.io/badge/ASP.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
----
+**A complete online grocery shopping platform for seamless food ordering**
 
-## 🚀 Features
-- 👤 **User Authentication** (Register/Login/Logout)  
-- 🛍️ **Product Browsing** with categories  
-- 🛒 **Shopping Cart System** (Add/Remove items)  
-- 📦 **Order Placement**  
-- 🛠️ **Admin Panel**: Manage categories & products  
-- 📊 **SQL Server Database** integration  
+## 📖 Overview
+
+A full-featured grocery shopping web application built using **ASP.NET WebForms** and **SQL Server**. This platform enables institutions and customers to deliver online grocery shopping with user enrollment, course management, admin dashboard, and progress tracking with a responsive Bootstrap interface.
 
 ---
+
+## ✨ Features
+
+### 🛍️ Customer Portal
+- 🔐 **User registration & secure authentication**
+- 🔍 **Browse and search products**
+- 🛒 **Add to cart functionality**
+- 📱 **Responsive design for all devices**
+- 📦 **Order placement and tracking**
+- 💳 **Multiple payment methods**
+
+### 🎯 Admin Panel
+- 📊 **Analytics dashboard**
+- 👥 **User & order management**
+- 📦 **Product & category management**
+- ⚡ **Real-time order status updates**
 
 ## 🛠️ Tech Stack
-- **Frontend:** ASP.NET WebForms, HTML, CSS, Bootstrap  
-- **Backend:** C# (Code-behind in .aspx.cs)  
-- **Database:** SQL Server  
-- **IDE:** Visual Studio 2022  
+
+![ASP.NET WebForms](https://img.shields.io/badge/ASP.NET-WebForms-blue)
+![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-red)
+![Bootstrap](https://img.shields.io/badge/UI-Bootstrap-purple)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)  
 
 ---
 
-## ⚙️ Setup Instructions
+## 🚀 Installation
 
-### 1. Clone the Repository
+### 📋 Prerequisites: XAMPP, PHP 7.4+, MySQL 5.7+
+
+### 1️⃣ Clone Repository
+
 ```bash
 git clone https://github.com/19JayPatel/FoodMart-Grocery-Website.git
+cd FoodMart-Grocery-Website
+```
+
+### 2️⃣ Setup Database
+
+- Open phpMyAdmin: http://localhost/phpmyadmin
+- Create database: `FoodMart`
+- Import: `database/FoodMart.sql`
+
+### 3️⃣ Configure
+
+- Edit `includes/config.php` with your database credentials
+
+### 4️⃣ Launch
+
+```
+http://localhost/FoodMart-Grocery-Website
 ```
 ---
-## 🛢 IMP SQL All Query
-```bash
+
+## 🛢️ Database Schema
+
+Execute the following SQL queries in SQL Server Management Studio to set up the database:
+
+```sql
 CREATE DATABASE FoodMart;
 
 CREATE TABLE [dbo].[Admin_tbl] (
@@ -102,9 +140,41 @@ INSERT INTO [dbo].[Admin_tbl] ([Username], [Password])
 VALUES ('foodmart', 'foodmart123');
 
 ```
+
+## 🔑 Default Credentials
+
+### 👨‍💼 Admin: **Username:** `foodmart` | **Password:** `foodmart123`
+### 👥 Students: Register at `/user/register.php`
+
+## 🔒 Security
+
+- ✅ Password hashing with `password_hash()`
+- ✅ SQL injection prevention
+- ✅ Session-based authentication
+- ✅ CSRF protection
+
+## � Authors
+
+### **Jay Patel**
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/19JayPatel)
+
+### **Param Vadher**
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:paramvadher04@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/param-vadher)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Param-vadher)
+
+## 📄 License
+
+Open source and available for educational purposes.
+
 ---
-## 📸 Screenshots
 
-### Home Page
-![Home Page](https://github.com/19JayPatel/FoodMart-Grocery-Website/blob/master/Screenshot/Home.png)
+<div align="center">
+  
+### ⭐ Star this repo if you find it helpful!
 
+Made with ❤️ by Jay Patel & Param Vadher
+
+</div>
