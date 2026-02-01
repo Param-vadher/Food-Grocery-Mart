@@ -153,7 +153,12 @@ VALUES ('foodmart', 'foodmart123');
 - ✅ Session-based authentication
 - ✅ CSRF protection
 
-## � Authors
+## 📸 Screenshots
+
+### Home Page
+![Home Page](Screenshot/Home.png)
+
+## 👥 Authors
 
 ### **Jay Patel**
 
